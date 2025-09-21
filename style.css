@@ -1,0 +1,158 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(to top, #3A1C71 0%, #FDBB2D 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.wrap {
+  max-width: 520px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+  backdrop-filter: blur(6px);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+/* Form Layout */
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  gap: 6px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #c97e3f;
+  box-shadow: 0 0 0 3px rgba(201, 126, 63, 0.25);
+  outline: none;
+}
+
+/* Gender */
+.gender {
+  border: none;
+  margin: 8px 0;
+}
+
+.gender legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.gender .icon {
+  display: inline-block;
+  margin-right: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gender input {
+  display: none;
+}
+
+.gender img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border 0.2s, transform 0.2s;
+}
+
+.gender input:checked + img {
+  border: 2px solid #c97e3f;
+  transform: scale(1.05);
+}
+
+/* Button */
+button {
+  padding: 10px 14px;
+  background: #c97e3f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s;
+}
+
+button:hover {
+  background: #a35d26;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Result Section */
+.result {
+  margin-top: 28px;
+  padding: 20px;
+  background: #fff9f4;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+.result h2 {
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.result p {
+  margin: 8px 0;
+  color: #444;
+  font-size: 14px;
+}
+
+.result strong {
+  color: #111;
+}
+
+.result a {
+  color: #c97e3f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}

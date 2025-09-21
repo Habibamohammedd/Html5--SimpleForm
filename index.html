@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <form id="regForm" class="form" autocomplete="off">
+      <label>
+        Enter Your Name:
+        <input id="name" type="text" required />
+      </label>
+
+      <label>
+        Enter Your Age:
+        <input id="age" type="number" min="1" max="120" required />
+      </label>
+
+      <fieldset class="gender">
+        <legend>Select Your Gender:</legend>
+        <label class="icon">
+          <input type="radio" name="gender" value="male" required />
+          <img src="img/male.jpg" alt="Male" />
+        </label>
+        <label class="icon">
+          <input type="radio" name="gender" value="female" required />
+          <img src="img/female.jpg" alt="Female" />
+        </label>
+      </fieldset>
+
+      <label>
+        Select your favorite color:
+        <select id="color">
+          <option>Green</option>
+          <option>Blue</option>
+          <option>Red</option>
+          <option>Purple</option>
+          <option>Black</option>
+          <option>Pink</option>
+        </select>
+      </label>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <section id="result" class="result" hidden>
+      <h2>Your Data:</h2>
+      <p><strong>Your name is:</strong> <span id="r-name"></span></p>
+      <p><strong>Your age is:</strong> <span id="r-age"></span></p>
+      <p><strong>Your gender is:</strong> <span id="r-gender"></span></p>
+      <p><strong>Your favorite color is:</strong> 
+        <span id="r-color"></span>
+      </p>
+      <p style="margin-top: 12px">
+        <a id="openDisplay" target="_blank">Open in “Your Data” page</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

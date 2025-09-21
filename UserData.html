@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Data</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="result">
+      <h2>Your Data :</h2>
+      <p><strong>Your name is:</strong> <span id="r-name"></span></p>
+      <p><strong>Your age is:</strong> <span id="r-age"></span></p>
+      <p><strong>Your gender is:</strong> <span id="r-gender"></span></p>
+      <p><strong>Your favorite color is:</strong> <span id="r-color"></span></p>
+    </section>
+  </main>
+
+  <script>
+    // Get query params
+    const params = new URLSearchParams(window.location.search);
+
+    const name   = params.get('name')   || 'N/A';
+    const age    = params.get('age')    || 'N/A';
+    const gender = params.get('gender') || 'N/A';
+    const color  = params.get('color')  || 'N/A';
+
+    // Fill fields
+    document.getElementById('r-name').textContent   = name;
+    document.getElementById('r-age').textContent    = age;
+    document.getElementById('r-gender').textContent = gender;
+
+    const colorSpan = document.getElementById('r-color');
+    colorSpan.textContent = color;
+    colorSpan.style.color = color.toLowerCase();
+  </script>
+</body>
+</html>
